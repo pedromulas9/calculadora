@@ -1,0 +1,277 @@
+:root {
+    --black: black;
+    --white: white;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.display-result {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    border-radius: 13px 13px 0 0;
+}
+
+#operation,
+#result {
+    margin-right: 10px;
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid var(--fontColor);
+    margin-top: 15%;
+    border-radius: 15px;
+    background-color: var(--bgColor);
+}
+
+.display-operation {
+    color: var(--fontColor);
+    font-weight: bolder;
+}
+
+.button {
+    color: var(--fontColor);
+    width: 100%;
+    font-weight: 500;
+    background: var(--bgColor);
+    border: 1px solid var(--fontColor);
+}
+
+.button:hover {
+    background-color: var(--fontColor);
+    color: var(--bgColor);
+}
+
+.operation-button:hover {
+    color: rgb(0, 183, 255);
+}
+
+.AC-button:hover {
+    color: tomato;
+}
+
+.result-button:hover {
+    background-color: rgb(0, 183, 255);
+    color: var(--bgColor);
+}
+
+.button-container {
+    padding: 0;
+}
+
+.button-space {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+#result {
+    font-weight: bold;
+    font-size: large;
+    color: rgb(0, 183, 255);
+}
+
+.operation-button {
+    color: rgb(0, 183, 255);
+}
+
+.AC-button {
+    color: tomato;
+}
+
+.result-button {
+    color: var(--fontColor);
+    background-color: var(--bgColor);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(-45deg, #af13ce, #35e1ff, #ff00d9, #21d3ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 20%;
+    }
+    20% {
+        background-position: 40% 60%;
+    }
+    40% {
+        background-position: 80% 100%;
+    }
+    60% {
+        background-position: 80% 60%;
+    }
+    80% {
+        background-position: 40% 20%;
+    }
+    100% {
+        background-position: 0% 20%;
+    }
+}
+
+.extremitie-left {
+    border-radius: 0 0 0 13px;
+}
+
+.extremitie-right {
+    border-radius: 0 0 13px 0;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: fit-content;
+}
+
+.theme-button {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 2.5px 0 #39a2db59;
+    cursor: pointer;
+    background-color: rgb(0, 183, 255);
+}
+
+.ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: left 0.5s;
+}
+
+.ball-move {
+    left: calc(100% - 20px);
+    background-color: #000000;
+}
+
+.theme-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dark-theme {
+    --bgColor: var(--black);
+    --fontColor: var(--white);
+}
+
+.light-theme {
+    --bgColor: var(--white);
+    --fontColor: var(--black);
+}
+
+.header-container {
+    /* background-color: var(--fontColor);
+color: var(--bgColor);
+border-radius: 5px;
+width: fit-content; */
+    color: var(--fontColor);
+    margin: 0 auto;
+    font-size: larger;
+}
+
+.site-info {
+    height: fit-content;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: var(--fontColor);
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+}
+
+.bibleThump {
+    width: 50px;
+    height: 50px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: inline-block;
+}
+
+li {
+    display: inline-block;
+}
+
+.info-content {
+    margin: 0 auto;
+    height: 100%;
+}
+
+@media screen and (max-width: 461px) {
+    .content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .content {
+        width: 70%;
+    }
+}
+
+.main-content {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    background: none repeat scroll 0 0 var(--bgColor);
+    position: relative;
+    height: 100%;
+    background-image: url('../img/yoTesta.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 150px;
+}
+
+.main-content:before {
+    box-shadow: -20px 0 20px -20px var(--fontColor) inset;
+    content: " ";
+    height: 100%;
+    left: -20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.main-content:after {
+    box-shadow: 20px 0 20px -20px var(--fontColor) inset;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 20px;
+}
